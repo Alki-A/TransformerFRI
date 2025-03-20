@@ -1,6 +1,14 @@
-pandas
-numpy
-matplotlib
-scikit-learn
-tensorflow
-git+https://github.com/flatironinstitute/DeepFRI.git
+# Upgrade setuptools to avoid build issues
+setuptools>=49.0.0
+
+# Ensure numpy is installed as a pre-built binary to avoid build issues
+numpy==1.23.5 --only-binary :all:
+pandas==2.2.3
+
+
+# DeepFRI dependencies
+pip>=23.2.1
+tensorflow==2.12.0
+keras==2.12.0
+torch==2.1.0
+
