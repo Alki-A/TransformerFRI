@@ -3,4 +3,4 @@ numpy
 matplotlib
 scikit-learn
 tensorflow
-mdeepfri
+git+https://github.com/flatironinstitute/DeepFRI.git
