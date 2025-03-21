@@ -7,7 +7,7 @@ sys.path.insert(0, os.path.abspath(os.path.join(os.path.dirname(__file__), '..')
 
 
 from Bio import SeqIO
-from src.data_processing import read_fasta
+from src.utils import read_fasta
 
 def test_read_fasta():
     test_data_dir = os.path.join(os.path.dirname(__file__), 'test_data')

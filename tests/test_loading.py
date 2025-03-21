@@ -7,7 +7,7 @@ import csv
 # Add the 'src' directory to sys.path to allow imports from there
 sys.path.insert(0, os.path.abspath(os.path.join(os.path.dirname(__file__), '..')))
 
-from src.data_processing import read_fasta, load_GO_annot, load_data, load_split_data
+from src.utils import read_fasta, load_GO_annot, load_data, load_split_data
 
 # Test for the load_GO_annot function
 def test_load_GO_annot():
