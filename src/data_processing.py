@@ -19,6 +19,7 @@ def read_fasta(fn_fasta):
         seq = str(record.seq)
         prot = record.id
         pdb, chain = prot.split('_') if '_' in prot else prot.split('-')
+
         prot = pdb.upper() + '-' + chain
         if len(seq) >= 60 and len(seq) <= 1000:
             if len(set(seq).difference(aa)) == 0:
