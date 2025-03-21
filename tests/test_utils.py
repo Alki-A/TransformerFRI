@@ -14,6 +14,7 @@ def test_read_fasta():
     fasta_file_path = os.path.join(test_data_dir, 'fasta_mock_data.fasta')
 
     sequences = read_fasta(fasta_file_path)
+    #sequences = {key.replace('-', '_'): value for key, value in sequences.items()}
 
     assert len(sequences) == 3
     assert "TEST-1" in sequences

@@ -7,7 +7,7 @@ import csv
 # Add the 'src' directory to sys.path to allow imports from there
 sys.path.insert(0, os.path.abspath(os.path.join(os.path.dirname(__file__), '..')))
 
-from src.data_processing import read_fasta, load_GO_annot, load_data
+from src.data_processing import read_fasta, load_GO_annot, load_data, load_split_data
 
 # Test for the load_GO_annot function
 def test_load_GO_annot():
@@ -56,5 +56,39 @@ def test_load_data():
     assert "mf" in prot2annot["TEST-3"]
 
     # Check if the 'mf' terms match expected GO terms
+    assert np.any(prot2annot["TEST-1"]['mf'] == 1.0)
+    assert np.any(prot2annot["TEST-2"]['mf'] == 1.0)
+    assert np.any(prot2annot["TEST-3"]['mf'] == 1.0)
+
+# Test for the load_split_data function
+def test_load_split_data():
+    test_data_dir = os.path.join(os.path.dirname(__file__), 'test_data')
+    train_file_path = os.path.join(test_data_dir, 'train_mock_data.txt')
+    valid_file_path = os.path.join(test_data_dir, 'valid_mock_data.txt')
+    test_file_path = os.path.join(test_data_dir, 'test_mock_data.txt')
+
+        # Create mock split files
+    os.makedirs(test_data_dir, exist_ok=True)
+    with open(train_file_path, 'w') as f:
+        f.write("TEST-1\nTEST-2\nTEST-3\n")
+    with open(valid_file_path, 'w') as f:
+        f.write("TEST-4\nTEST-5\n")
+    with open(test_file_path, 'w') as f:
+        f.write("TEST-6\nTEST-7\n")
 
 
+    # Test that the load_split_data function loads the splits correctly
+    train, valid, test = load_split_data(train_file_path, valid_file_path, test_file_path)
+
+    # Verify the content of the splits
+    assert len(train) == 3
+    assert len(valid) == 2
+    assert len(test) == 2
+    assert "TEST-1" in train
+    assert "TEST-5" in valid
+    assert "TEST-7" in test
+
+    # Clean up mock files after test
+    #os.remove(train_file_path)
+    #os.remove(valid_file_path)
+    #os.remove(test_file_path)
