@@ -1,0 +1,16 @@
+### GO-terms (molecular_function)
+GO:0005126	GO:0008134	GO:0016168	GO:0004532	GO:0003918
+### GO-names (molecular_function)
+cytokine receptor binding	transcription factor binding	chlorophyll binding	exoribonuclease activity	DNA topoisomerase activity
+### GO-terms (biological_process)
+GO:0009058	GO:0007165
+### GO-names (biological_process)
+biosynthetic process	signal transduction
+### GO-terms (cellular_component)
+GO:0005737	GO:0005634
+### GO-names (cellular_component)
+cytoplasm	nucleus
+### Protein GO Annotations
+TEST-1	GO:0005126,GO:0016168	GO:0009058	GO:0005737
+TEST-2	GO:0004532	GO:0007165	GO:0005634
+TEST-3	GO:0008134,GO:0003918,GO:0005126	GO:0009058,GO:0007165	GO:0005737,GO:0005634
