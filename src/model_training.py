@@ -34,7 +34,7 @@ def build_model(y, maxlen, vocab_size, embed_dim=1024, num_heads=12, ff_dim=1024
     x = layers.Dense(4096, activation='relu')(x)
     x = layers.Dense(2048, activation='relu')(x)
     x = layers.Dense(1024, activation='relu')(x)
-    outputs = layers.Dense(y.shape[1], activation='softmax')(x)
+    outputs = layers.Dense(4, activation='softmax')(x)
     model = keras.Model(inputs=inputs, outputs=outputs)
     
     optimizer = tf.keras.optimizers.Adam(learning_rate=1e-5)
@@ -42,7 +42,7 @@ def build_model(y, maxlen, vocab_size, embed_dim=1024, num_heads=12, ff_dim=1024
     
     return model
 
-def train_model(model, dataset_train, dataset_val, epochs=200):
+def train_model(model, dataset_train, dataset_val, epochs=2):
     """
     Trains the model.
     
