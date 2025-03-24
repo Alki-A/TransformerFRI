@@ -19,4 +19,4 @@ In order to run the correct pipeline, Snakemake can be used as follows:
    ```bash
    snakemake --cores <N>
 ``` 
-where <N> is the number of CPU cores allocated.
+where \<N\> is the number of CPU cores allocated.
