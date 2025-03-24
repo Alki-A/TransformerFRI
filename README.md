@@ -10,7 +10,7 @@ Before running the project, ensure you have all dependencies installed:
    Install dependencies (Snakemake is included here):
    ```bash
    pip install -r requirements.txt
-```
+   ```
 
 
  ## Usage
