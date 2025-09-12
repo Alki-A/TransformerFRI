@@ -17,7 +17,7 @@ Ensure the above are installed on your system:
 Verify installation:
 >```bash
 >python3 --version
-   pip --version
+>pip --version
 >```
 
 ## Environment and Installation
