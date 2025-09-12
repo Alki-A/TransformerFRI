@@ -15,48 +15,48 @@ Ensure the above are installed on your system:
 - [Download Python 3.11](https://www.python.org/downloads/release/python-3110/)  
 
 Verify installation:
-```bash
-   python3 --version
+>```bash
+>python3 --version
    pip --version
-```
+>```
 
 ## Environment and Installation
 
 > **Important:** The Python environment must be set up before installing dependencies or running the pipeline.
 
 1. Create and activate a Python environment: 
-```bash
-   python3.11 -m venv transformerfri-env 
-   source transformerfri-env/bin/activate
-```
+>```bash
+>python3.11 -m venv transformerfri-env 
+>source transformerfri-env/bin/activate
+>```
 
 2. Upgrade pip:
-```bash
-   pip install --upgrade pip
-```
+>```bash
+>pip install --upgrade pip
+>```
 
 3. Clone the repository in your chosen directory:
-```bash
-   git clone https://github.com/Alki-A/TransformerFRI.git
-   cd TransformerFRI
-```
+>```bash
+>git clone https://github.com/Alki-A/TransformerFRI.git
+>cd TransformerFRI
+>```
 
 4. Install Snakemake:
-```bash
-   pip install snakemake==9.11.2
-```
+>```bash
+>pip install snakemake==9.11.2
+>```
 
 5. Install project dependencies:
-```bash
-   pip install -r requirements.txt
-```
+>```bash
+>pip install -r requirements.txt
+>```
 
  ## Usage
 
 In order to run the pipeline, Snakemake can be used as follows:
-```bash
-   snakemake --cores <N>
-``` 
+>```bash
+>snakemake --cores <N>
+>``` 
 where \<N\> is the number of CPU cores allocated.
 
    ### Notes on usage
