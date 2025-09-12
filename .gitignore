@@ -172,5 +172,23 @@ cython_debug/
 
 # PyPI configuration file
 .pypirc
+# Project-specific ignores
 src/main.py
 config/
+constraints.txt
+requirements2.txt
+
+# Snakemake working directory
+.snakemake/
+
+# Data outputs
+data/*.pkl
+data/*.npy
+data/*.tfrecord
+data/dataset_train/
+data/dataset_val/
+data/model.h5
+
+# Other local/temporary files
+*.log
+*.tmp
