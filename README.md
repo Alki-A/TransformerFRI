@@ -3,6 +3,8 @@
 
  Single-value classifications across functions of different protein given sequence-only data, using Transformer architecture.
 
+Protein function predicition is a key area of research, which is progressing rapidly. TransformerFRI implements a Transformer-based architecture for function prediction directly from amino acid sequences, leveraging the information encoded in the sequence itself. This allows for the classification of proteins into functional categories, using only the FASTA sequences and Gene Ontology (GO) annotations.
+
  ## System Setup
 
 This project requires:
