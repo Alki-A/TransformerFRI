@@ -22,6 +22,11 @@ Verify installation:
 >pip --version
 >```
 
+## Configuration
+Pipeline parameters (file paths, model hyperparameters) are stored in `config.yaml`.  
+This file can be adjusted as needed to change input locations or model settings without modifying code.
+
+
 ## Environment and Installation
 
 > **Important:** The Python environment must be set up before installing dependencies or running the pipeline.
