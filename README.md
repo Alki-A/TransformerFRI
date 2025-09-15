@@ -57,9 +57,9 @@ Verify installation:
 
 In order to run the pipeline, Snakemake can be used as follows:
 >```bash
->snakemake --cores <N>
+>snakemake --cores 4
 >``` 
-where \<N\> is the number of CPU cores allocated.
+where `4` is the number of CPU cores allocated, adjust as needed based on system resources.
 
    ### Notes on usage
    The pipeline defaults to **2 epochs** for quick testing and demonstrating viability of code with a CPU alone.
