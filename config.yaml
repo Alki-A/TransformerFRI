@@ -1,0 +1,35 @@
+# config.yaml
+
+# Input files
+fasta_file: "data/pdb_seqres.txt.gz"
+go_annot_file: "data/nrPDB-GO_2019.06.18_annot.tsv"
+train_file: "data/nrPDB-GO_2019.06.18_train.txt"
+valid_file: "data/nrPDB-GO_2019.06.18_valid.txt"
+test_file: "data/nrPDB-GO_2019.06.18_test.txt"
+
+# Preprocessing/Vectorization
+max_tokens: 5000
+output_sequence_length: 300
+
+# Training parameters
+batch_size: 32
+epochs: 2
+learning_rate: 0.001
+dropout_rate: 0.5
+l2_regularization: 0.01
+
+# Outputs
+model_output: "data/model.h5"
+
+# Optional: directory names for processed datasets
+dataset_train_dir: "data/dataset_train"
+dataset_val_dir: "data/dataset_val"
+preprocessed_data_file: "data/preprocessed_data.pkl"
+vectorized_data_file: "data/vectorized_data.pkl"
+pdb2seq_file: "data/pdb2seq.pkl"
+prot2annot_file: "data/prot2annot.pkl"
+goterms_file: "data/goterms.pkl"
+gonames_file: "data/gonames.pkl"
+train_split_file: "data/train.pkl"
+valid_split_file: "data/valid.pkl"
+test_split_file: "data/test.pkl"
