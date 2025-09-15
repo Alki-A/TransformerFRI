@@ -77,3 +77,13 @@ where \<N\> is the number of CPU cores allocated.
    5. Install requirements 
    6. Run Snakemake pipeline (--cores <N>) 
    7. Collect outputs in data/
+
+## Testing
+
+To ensure all code works correctly, automated tests are provided using `pytest`.  
+Tests cover main functions including data loading, preprocessing, vectorization, and model preparation.
+
+Run the tests as follows:
+>```bash
+>pytest
+>````
