@@ -58,6 +58,11 @@ This file can be adjusted as needed to change input locations or model settings 
 >pip install -r requirements.txt
 >```
 
+## Testing
+
+To ensure all code works correctly, automated tests are provided using `pytest`.  
+Tests cover main functions including data loading, preprocessing, vectorization, and model preparation.
+
  ## Usage
 
 In order to run the pipeline, Snakemake can be used as follows:
@@ -85,10 +90,7 @@ where `4` is the number of CPU cores allocated, adjust as needed based on system
    6. Run Snakemake pipeline (--cores <N>) 
    7. Collect outputs in data/
 
-## Testing
 
-To ensure all code works correctly, automated tests are provided using `pytest`.  
-Tests cover main functions including data loading, preprocessing, vectorization, and model preparation.
 
 Run the tests as follows:
 >```bash
