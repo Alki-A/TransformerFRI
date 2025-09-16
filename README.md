@@ -22,9 +22,23 @@ Verify installation:
 >pip --version
 >```
 
-## Configuration
+## Configuration and Hyperparameters
 Pipeline parameters (file paths, model hyperparameters) are stored in `config.yaml`.  
 This file can be adjusted as needed to change input locations or model settings without modifying code.
+
+All model and pipeline parameters, including:
+
+- Number of epochs (`epochs`)
+- Batch size (`batch_size`)
+- Learning rate (`learning_rate`)
+- Input/output file paths
+
+are stored in `config.yaml`. Users can adjust these without modifying code.
+
+
+   ### Notes
+   The pipeline defaults to **2 epochs, 32 batch_size, and **0.001 learning_rate** for quick testing and demonstrating viability of code with a CPU alone.
+   For meaningful results, use **~200 epochs, 64 batch_size, and 0.0001 learning_rate** on a GPU-enabled system or HPC server.
 
 
 ## Environment and Installation
@@ -75,9 +89,6 @@ In order to run the pipeline, Snakemake can be used as follows:
 >``` 
 where `4` is the number of CPU cores allocated, adjust as needed based on system resources.
 
-   ### Notes on usage
-   The pipeline defaults to **2 epochs** for quick testing and demonstrating viability of code with a CPU alone.
-   For meaningful results, use **~200 epochs** on a GPU-enabled system or HPC server.
 
    ## Outputs After running the pipeline, you will see:
    - data/model.h5 → trained model
