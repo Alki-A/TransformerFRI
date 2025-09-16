@@ -63,7 +63,7 @@ This file can be adjusted as needed to change input locations or model settings 
 To ensure all code works correctly, automated tests are provided using `pytest`.  
 Tests cover main functions including data loading, preprocessing, vectorization, and model preparation.
 >```bash
->pytest
+>python3.11 -m pytest -W ignore::DeprecationWarning
 >```
 
 
@@ -96,7 +96,3 @@ where `4` is the number of CPU cores allocated, adjust as needed based on system
 
 
 
-Run the tests as follows:
->```bash
->pytest
->````
