@@ -177,6 +177,7 @@ src/main.py
 config/
 constraints.txt
 requirements2.txt
+config.py
 
 # Snakemake working directory
 .snakemake/
