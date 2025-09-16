@@ -37,8 +37,9 @@ are stored in `config.yaml`. Users can adjust these without modifying code.
 
 
    ### Notes
-   The pipeline defaults to **2 epochs, 32 batch_size, and **0.001 learning_rate** for quick testing and demonstrating viability of code with a CPU alone.
-   For meaningful results, use **~200 epochs, 64 batch_size, and 0.0001 learning_rate** on a GPU-enabled system or HPC server.
+   The pipeline defaults to **2 epochs**, **32 batch_size**, and **0.001 learning_rate** for quick testing and demonstrating viability of code with a CPU alone.  
+   For meaningful results, use **~200 epochs**, **64 batch_size**, and **0.0001 learning_rate** on a GPU-enabled system or HPC server.
+
 
 
 ## Environment and Installation
